@@ -1,17 +1,25 @@
+# The program draws all DICOM images stored
+# in a directory sequentially.
+
 import numpy as np
 import cv2
 import dicom as pdicom
 import matplotlib.pyplot as plt
+import os
+import sys
 
-file = '/home/arya/fiducials/datasets/DICOM-MRI/democases/006.dcm'
-data = pdicom.read_file(file)
+PATH = sys.argv[1] # get the path
 
-pixelDims = ((int)(data.Rows), (int)(data.Columns))
-pixelSpacing = (float(data.PixelSpacing[0]), float(data.PixelSpacing[1]))
+files = os.listdir(PATH)
+files.sort()
 
-x = np.arange(0.0, (pixelDims[0]+1)*pixelSpacing[0], pixelSpacing[0])
-y = np.arange(0.0, (pixelDims[1]+1)*pixelSpacing[1], pixelSpacing[1])
-
-ArrayDicom = data.pixel_array
-plt.imshow(ArrayDicom,cmap='gray')
-plt.show()
+fig = None
+for file in files:
+    dicomfile = pdicom.read_file(os.path.join(PATH,file))
+    img = dicomfile.pixel_array
+    if fig is None:
+        fig = plt.imshow(img,cmap='gray')
+    else:
+        fig.set_data(img)
+    plt.pause(0.5)
+    plt.draw()
