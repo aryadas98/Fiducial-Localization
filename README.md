@@ -17,7 +17,7 @@ Our algorithm performed well on the final day. It was just a bit
 less accurate than the CNN aproaches.
 
 Sample output:
-!(results.jpg)
+![](results.jpg)
 
 ## Contributors
 The following people contributed to this project in various ways:
