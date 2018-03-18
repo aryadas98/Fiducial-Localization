@@ -26,4 +26,3 @@ The following people contributed to this project in various ways:
 * Rohan Kumar
 * Anshuman Dwivedi
 * Hit Vardhan
-* Arya Das
