@@ -16,7 +16,7 @@ this approach.
 Our algorithm performed well on the final day. It was just a bit
 less accurate than the CNN aproaches.
 
-Sample output:
+Sample output:  
 ![](results.jpg)
 
 ## Contributors
