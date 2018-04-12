@@ -23,6 +23,6 @@ Sample output:
 The following people contributed to this project in various ways:
 
 * Kartik Agrawal
-* Rohan Kumar
-* Anshuman Dwivedi
+* [Rohan Kumar](https://github.com/rrohan)
+* [Anshuman Dwivedi](https://github.com/captainswingad)
 * Hit Vardhan
